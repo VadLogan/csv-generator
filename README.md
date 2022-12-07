@@ -12,7 +12,7 @@ Tool for generating csv files for auto-feeds
 
 Clone project to your local machine: 
 ```
-git clone https://vadim_palkin@bitbucket.org/peak-iii/csv-generator.git
+git clone https://github.com/VadLogan/csv-generator.git
 ```
 
 Type on terminal:
