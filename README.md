@@ -32,7 +32,7 @@ npm run generate:brandt-feed
 npm run generate:olympia-feed
  ```
 
-If you want to specify row amount to file you need to add ROW_AMOUT variable before execution line:
+If you want to specify row amount to file you need to add ROWS_AMOUT variable before execution line:
 ```
-ROW_AMOUT=10 npm run generate:olympia-feed
+ROWS_AMOUT=10 npm run generate:olympia-feed
 ```

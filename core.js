@@ -1,4 +1,5 @@
 const fs = require('fs')
+const {join} = require('path')
 const  { stringify } = require('csv-stringify/sync');
 
 module.exports = {
@@ -23,8 +24,8 @@ module.exports = {
     const hours = date.getHours()
     const minutes = date.getMinutes()
     const seconds = date.getSeconds()
-
-    fs.writeFileSync(`${__dirname}/${fileName}_${hours}:${minutes}:${seconds}.csv`, output);
+    const path = join(__dirname,`${fileName}_${hours}:${minutes}:${seconds}.csv`)
+    fs.writeFileSync(path, output);
   },
   randomDate() {
     const start = new Date(2012, 0, 1)
