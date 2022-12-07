@@ -14,7 +14,7 @@ module.exports = {
     const output = stringify(
       content,
       {
-        delimiter: ';',
+        delimiter: ',',
         header: true,
         columns,
       }
