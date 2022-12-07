@@ -27,7 +27,7 @@ module.exports = {
      const fileNameSystem = `${fileName}_${hours}:${minutes}:${seconds}.csv`
 
      const path = join(__dirname, `${fileName}.csv`)
-    fs.writeFileSync(path, output);
+    fs.writeFileSync(path, output, 'utf-8');
   },
   randomDate() {
     const start = new Date(2012, 0, 1)
