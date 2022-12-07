@@ -4,7 +4,7 @@ const  { stringify } = require('csv-stringify/sync');
 
 module.exports = {
   parserCore: (headers,fileName, contentItemFn) => {
-
+    
     const content = Array(Number(process.env.ROWS_AMOUNT ?? 1)).fill(null).map(contentItemFn)
     const columns = headers.map(header => ({
       header,
@@ -24,8 +24,8 @@ module.exports = {
     const hours = date.getHours()
     const minutes = date.getMinutes()
     const seconds = date.getSeconds()
-    const path = join('./',`${fileName}_${hours}:${minutes}:${seconds}.csv`)
-    fs.writeFileSync(path, output);
+    
+    fs.writeFileSync(`${fileName}_${hours}:${minutes}:${seconds}.csv`, output);
   },
   randomDate() {
     const start = new Date(2012, 0, 1)
